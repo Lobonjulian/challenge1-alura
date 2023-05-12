@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge alura 1 </title>
+    <link rel="stylesheet" href="css/style.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+        >
+        
+</head>
+<body>
+    
+    <main class="container">
+        <header class="encabezado">
+            <img  
+                class="logo"
+                src="imagenes/letra-j (1).png" 
+                alt="logo"> 
+            <h1 class="titulo">Primer Challenge </h1>
+        </header>
+
+        <aside class="sec-main">
+            <textarea  id="input-principal" 
+                cols="30" 
+                rows="10" 
+                placeholder="Ingresea el texto aqui" 
+                class="textarea-principal"></textarea>
+            
+            <div class="sec-label">
+                <i class="bi bi-exclamation-circle-fill"></i>
+                <p class="label">
+                    Solo letras minúsculas y sin acentos
+                </p>
+            </div>
+
+            <div class="botones">
+                <button class="btn-enc" onclick="encriptar()">Encriptar</button>
+                <button class="btn-des" onclick="desencriptar()" >Desencriptar</button>
+            </div>
+        </aside>
+
+        <sidebar class="mensaje-des" >
+            <div class="imagen-texto " id="caja-imagen" >
+                <img 
+                    src="imagenes/encriptar (1).jpg" 
+                    alt="encriptar"
+                    class="imagen">
+
+                <div class="textos">
+                    <h2 class="subtitulo">
+                        Ningún mensaje fue encontrado
+                    </h2>
+                    <p class="parrafo1">
+                        Ingresa el texto que desees encriptar o desencriptar
+                    </p>
+                </div>
+            </div>
+
+            <div class="cajacifrada" id="caja-resultado">            
+                <textarea  
+                    id="resultadodelTexto" 
+                    cols="30" 
+                    rows="10"  
+                    class="textarea-desencriptar">
+                </textarea>            
+                <button 
+                    class="btn-copiar" 
+                    id="copiar" 
+                    onclick="copiar()">
+                        Copiar
+                </button>
+            </div>
+        </sidebar>
+
+        <footer class="pie-pagina"> 
+            <img class="footer-logo" 
+                src="imagenes/what-is-a-web-developer (1).jpg" 
+                alt="logo"> 
+            <h1 class="texto-final">Julian Lobon Aguilar</h1>
+        </footer>
+    </main>
+</body>
+<script src="index1.js"></script>
+</html>
