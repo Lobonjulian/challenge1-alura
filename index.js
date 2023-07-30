@@ -33,7 +33,7 @@ function copiar() {
 
 function desapareser(){
     document.getElementById("caja-imagen").style.display = "none";
-    document.getElementById("caja-resultado").style.display = "flex"; 
+    document.getElementById("caja-resultado").style.display = "flex","jusjustifyContent: center"; 
 }
 
 function encriptacion(texto){

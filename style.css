@@ -1,0 +1,217 @@
+/* Estilo de letra que se va a utilizar */
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap');
+
+/* estilo generales*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Lumanosimo', sans-serif;
+    background-color: #763C18;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "encabezado encabezado encabezado"
+        "sec-main sec-main mensaje-des"
+        "pie-pagina pie-pagina pie-pagina";
+}
+
+/* estilo de encabezado */
+.encabezado {
+    grid-area: encabezado;
+    display: flex;  
+    justify-content: center;
+}
+    .logo{
+        margin: 20px 20px 0 0;
+        width: 60px;
+        height: 60px;
+    }
+    .titulo{
+        margin: 10px;
+        padding: 10px;
+        color : #b22222;
+        border : 2px solid #fff;
+    }
+
+/*estilos de sec-main*/
+.sec-main {
+    grid-area: sec-main;
+    display: flex;
+    flex-direction: column;
+}
+    .textarea-principal{
+        display: flex;
+        height: 335px;
+        color: yellowgreen;
+        font-size: 30px;
+        text-align: center;
+        border: none;
+        resize: none;
+        background-color: #763C18;  
+        }
+        .textarea-principal:focus{
+            outline:none;
+        }
+        .textarea-principal::placeholder{
+            color: #b22222;
+        }
+
+    .sec-label{
+        display: flex;
+        justify-content: center;
+    }
+        .label {
+            height: 18px;
+            font-size: 17px;
+            color: #000111;         
+        }
+
+    .botones{
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+    }
+        button{
+        width: 250px;
+        height: 60px;
+        padding: 20px;
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 19px;
+        text-align: center;
+        color: #fafafafa;
+        border-radius: 24px;
+        }
+        .btn-enc{
+            background: #0A3871;
+        }
+        .btn-enc:hover{
+        background-color: #175fb6;
+        }
+
+        .btn-des{
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            }
+        .btn-des:hover{
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        }
+
+/* estilo de mensaje-des*/
+.mensaje-des {
+    grid-area: mensaje-des;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #B96554;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px; 
+}
+
+    .imagen-texto {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        }
+        .imagen {
+            margin-bottom: 10px;
+        } 
+        .textos {
+            display: flex;
+            flex-direction: column;
+        }
+        .subtitulo {
+            width: 300px;
+            text-align: center;
+            color: #343A40;
+        }
+        .parrafo {
+            width: 300px;
+            font-size: 14px;
+            text-align: center;
+            color: #495057;
+            }
+
+    .cajacifrada{
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+        .textarea-desencriptar{
+            text-align: center;
+            color: yellowgreen;
+            font-size: 22px;
+            background-color: #B96554;
+            border: none;
+        }
+        .textarea-desencriptar:focus{
+            outline:none;
+        }
+        .copiar{
+            display: flex;
+            justify-content: center;
+        }
+        .btn-copiar{
+            background: radial-gradient(circle, rgba(251,63,76,1) 0%, rgba(19,1,11,1) 100%);
+        }
+        .btn-copiar:hover{
+            background: linear-gradient(0deg, rgba(183,195,34,1) 0%, rgba(253,45,45,1) 70%);
+        }
+
+/* estilo de pie de pagina */
+.pie-pagina {
+    grid-area: pie-pagina;
+    display: flex;
+    justify-content: center;
+}
+.footer-logo {
+    margin: 10px;
+    width: 150px;
+    height: 100px;
+}
+.texto-final{
+    margin: 20px;
+    padding: 20px;
+    color: #b22222;
+}
+
+/**Tablet**/
+@media screen and (max-width:  768px) {
+
+    .imagen{
+        display: none;
+    }
+    .label{
+        font-size: 12px;
+    }
+    .textarea-principal{
+        font-size: 25px;
+    }
+    button{
+        width: 150px;
+        font-size: 15px;   
+    }
+    .textarea-desencriptar{
+        font-size: 12px;
+    }
+
+/**Movil**/
+}
+@media (max-width: 500px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .botones{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    .pie-pagina{
+        align-items: center;
+    }
+}
